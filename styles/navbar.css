@@ -1,0 +1,101 @@
+/* Navbar Styles
+#navbar {
+  margin-bottom: 1.5rem;
+  height: 100px;
+  width: 100%;
+  border-top: 3px solid rgb(47, 66, 84);
+  display: flex;
+  padding: 15px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#navbar-left {
+  height: 65px;
+  width: 25%;
+  border: 1px solid transparent;
+  margin-left: 80px;
+}
+#navbar-right {
+  height: 100%;
+  width: 60%;
+  border: 1px solid transparent;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: black;
+}
+#right-upper {
+  height: 50%;
+  width: 100%;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: right;
+  gap: 22px;
+  align-items: center;
+}
+#right-upper:hover {
+  cursor: pointer;
+}
+#right-lower {
+  height: 50%;
+  width: 100%;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  margin-top: 3px;
+}
+#rl:hover {
+  font-weight: bolder;
+  cursor: pointer;
+  color: black;
+}
+#site-logo {
+  height: 100%;
+  width: 35%;
+  padding-top: 15px;
+}
+#navbar-button {
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  font-family: sans-serif;
+  margin-right: 30px;
+  cursor: pointer;
+}
+#navbar-input {
+  border-radius: 25px;
+  width: 250px;
+  height: 30px;
+  padding: 15px;
+  margin-top: -10px;
+  border: 1px solid;
+  background-color: #fffded;
+}
+#ru {
+  font-size: 12px;
+  color: rgb(106, 106, 106);
+  text-decoration: none;
+  font-family: sans-serif;
+}
+#navbar-image {
+  height: 100px;
+  width: 100%;
+  border: 1px solid transparent;
+  margin-top: 10px;
+}
+#navbar-img {
+  height: 100%;
+  width: 100%;
+}
+#bar-img {
+  height: 100%;
+  width: 4%;
+  cursor: pointer;
+  color: white;
+} */

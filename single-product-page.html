@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Product Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./styles/single-product-page.css" />
+    <link rel="stylesheet" href="./styles/Product_utilities.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #232F3E;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo {
+            margin-right: 20px;
+        }
+        .navbar .logo img {
+            height: 30px;
+        }
+        .navbar .location {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .navbar .location i {
+            margin-right: 5px;
+        }
+        .navbar .search-bar {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .navbar .search-bar select,
+        .navbar .search-bar input {
+            padding: 8px;
+            border: none;
+            outline: none;
+        }
+        .navbar .search-bar select {
+            border-radius: 4px 0 0 4px;
+        }
+        .navbar .search-bar input {
+            flex: 1;
+        }
+        .navbar .search-bar button {
+            background-color: #febd69;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .navbar .account,
+        .navbar .orders,
+        .navbar .cart {
+            margin-left: 20px;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+        }
+        .navbar .cart {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .cart i {
+            margin-right: 5px;
+        }
+        .navbar .cart .cart-count {
+            background-color: #febd69;
+            color: black;
+            padding: 2px 6px;
+            border-radius: 50%;
+            margin-left: 5px;
+        }
+
+
+
+        .footer {
+            background-color: #232F3E;
+            color: white;
+            padding: 20px 0;
+        }
+        .footer-top {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+        .footer-top a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            border-top: 1px solid #3a4553;
+        }
+        .footer-links div {
+            width: 20%;
+        }
+        .footer-links h3 {
+            border-bottom: 2px solid #3a4553;
+            padding-bottom: 10px;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #3a4553;
+        }
+        .footer-bottom a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-bottom img {
+            height: 30px;
+            margin: 0 5px;
+        }
+    </style> 
+  </head>
+  <body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+        </div>
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Select your address</span>
+        </div>
+        <div class="search-bar">
+            <select>
+                <option value="all">All</option>
+                <option value="books">Books</option>
+                <option value="electronics">Electronics</option>
+                <!-- Add more categories as needed -->
+            </select>
+            <input type="text" placeholder="Search Amazon">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="account">
+            <span>Hello, Sign in</span><br>
+            <span>Account & Lists</span>
+        </div>
+        <div class="orders">
+            <span>Returns</span><br>
+            <span>& Orders</span>
+        </div>
+        <div class="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+            <span class="cart-count">0</span>
+        </div>
+    </nav>
+    <section>
+        <div class="main-section">
+            
+            <div class="section-one">
+                <div class="headphones">
+                    <div class="headphones-big" id="data">
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="section-two">
+                <div class="accessories">
+                    <div class="text">
+                        <h4>Beats Solo2 On Ear Headphones - Black</h4>
+                    </div>
+                    <div class="star-container">
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    <div class="reviews">
+                        <h3>0 reviews</h3>
+                    </div>
+                    <div class="submit-rev">
+                        <a class="home" href="#">Submit a review</a>
+                    </div>
+                    </div>
+                    <div class="line">
+                        <p></p>
+                    </div>
+                    <div class="money">
+                        <span class="dollar" id="price"> </span>&nbsp;&nbsp;<span class="cancel-price" id="noprice"></span>
+                    </div>
+                    <div class="available"></div>
+                        <h4 class="availability">Availability: 
+                            <span class="stock">In Stock</span>
+                        </h4>
+                        <h4 class="category">Category: 
+                            <span class="access">Accessories</span>
+                        </h4>
+                        <h4 class="free-shipping">Free Shipping</h4>
+                        <div class="line">
+                            <p></p>
+                        </div>
+                        <div class="wrapper">
+                            <div class="select-color">
+                                Select Color  
+                            </div>
+                            <a class="circle-blue" href="#">
+                                <p></p>
+                            </a>
+                            <a class="circle-red" href="#">
+                                <p></p>
+                            </a>
+                            <a class="circle-black" href="#">
+                                <p></p>
+                            </a>
+                            <a class="circle-yellow" href="#">
+                                <p></p>
+                            </a>
+                        </div>
+                        <div class="size-select">
+                            <h4 class="size"> Size</h4>
+                             <select name="Select" id="select">
+                                <optgroup label="Select">
+                                    <option value="">XS</option>
+                                    <option value="">YR</option>
+                                    <option value="">FR</option>
+                                    <option value="">IG</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <div class="line">
+                            <p></p>
+                        </div>
+                        <div class="plus-cart-wrapper" id="btn">
+                           
+                          
+                             
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-three">
+                <div class="best-seller-wrap ">
+                    <h3 class="best-seller"> BEST SELLER</h3>
+                </div>
+                <div class="sub-3-border">
+                    <div class="image-wrapper">
+                        <div class="macbook-image">
+                            <img src="images/Macbook.png" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="mac-text.star" >
+                        <h4 class="macbook-text">Apple Macbook Pro</h4>
+                        <div class="stars">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <div class="money">
+                            <h4 class="dollar">$499 <span class="cancel-price"> $599</span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div>
+    </section>
+    <footer class="footer">
+        <div class="footer-top">
+            <a href="#">Back to top</a>
+        </div>
+        <div class="footer-links">
+            <div>
+                <h3>Get to Know Us</h3>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press Releases</a>
+                <a href="#">Amazon Cares</a>
+                <a href="#">Gift a Smile</a>
+            </div>
+            <div>
+                <h3>Connect with Us</h3>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div>
+                <h3>Make Money with Us</h3>
+                <a href="#">Sell on Amazon</a>
+                <a href="#">Sell under Amazon Accelerator</a>
+                <a href="#">Amazon Global Selling</a>
+                <a href="#">Become an Affiliate</a>
+                <a href="#">Fulfilment by Amazon</a>
+                <a href="#">Advertise Your Products</a>
+                <a href="#">Amazon Pay on Merchants</a>
+            </div>
+            <div>
+                <h3>Let Us Help You</h3>
+                <a href="#">Your Account</a>
+                <a href="#">Returns Centre</a>
+                <a href="#">100% Purchase Protection</a>
+                <a href="#">Amazon App Download</a>
+                <a href="#">Amazon Assistant Download</a>
+                <a href="#">Help</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="#">Conditions of Use & Sale</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Interest-Based Ads</a>
+        </div>
+    </footer>
+<script src="singleproduct.js"></script>
+  </body>
+</html>
